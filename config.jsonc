@@ -1,0 +1,68 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "display":
+    {
+        "separator": "",
+        "size":
+        {
+            "binaryPrefix": "iec",
+            "ndigits": 0,
+            "spaceBeforeUnit": "never",
+            "maxPrefix": "MB"
+        },
+        "color":
+        {
+            "keys": "bright_white"
+        },
+        "percent":
+        {
+            "type": 1
+        }
+    },
+    "logo":
+    {
+        "type": "small",
+        "padding":
+        {
+            "top": 2
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "format": "{#dim_white}{#bright_white}{user-name}@{host-name}"
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "⊹ os       ",
+            "format": "{name}"
+        },
+        {
+            "type": "command",
+            "key": "⊹ kernel   ",
+            "text": "printf 'Linux '; uname -r | sed -E 's/^([0-9.]+)-([0-9]+-)?(.*)$/\\1 \\3/; s/ $//'"
+        },
+        {
+            "type": "host",
+            "key": "⊹ host     ",
+            "format": "{family}"
+        },
+        {
+            "type": "packages",
+            "key": "⊹ pkgs     ",
+            "combined": true
+        },
+        {
+            "type": "de",
+            "key": "⊹ de       "
+        },
+        {
+            "type": "memory",
+            "key": "⊹ memory   ",
+            "format": "{used} / {total} ({percentage})"
+        },
+        "break"
+    ]
+}
